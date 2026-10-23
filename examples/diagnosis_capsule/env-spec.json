@@ -1,0 +1,6 @@
+{
+  "dependencies": [],
+  "gpu_count": 0,
+  "python": ">=3.9",
+  "scope": "diagnosis-component-only"
+}

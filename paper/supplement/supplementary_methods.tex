@@ -1,0 +1,218 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,booktabs,array,tabularx,caption,hyperref,microtype}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{N}[1]{>{\raggedleft\arraybackslash}p{#1}}
+\renewcommand{\thesection}{S\arabic{section}}
+\renewcommand{\thetable}{S\arabic{table}}
+\captionsetup[table]{font=small,labelfont=bf,justification=raggedright,singlelinecheck=false}
+\title{Supplementary Methods\\When Gene Ontology Evaluations Disagree}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+
+This supplement describes the retained controlled fixtures and the subsequent
+independent regression. It is a reproducibility specification, not a new blind
+sample. The main manuscript reports the compact comparison; per-case outputs
+remain in the experiment archive.
+
+\section{Registered family and forward semantics}
+
+The family contains the empty set, each of the following 11 singleton edits,
+and eight specified pairs. Candidate membership is not a search over the entire
+power set. Fixed semantics come from the frozen forward implementations, not
+from fitting the observed metric discrepancy.
+
+\begin{table}[tbp]\centering\small
+\renewcommand{\arraystretch}{1.12}
+\caption{Registered singleton edits and their fixed forward semantics.}\label{tab:singletons}
+\begin{tabularx}{\linewidth}{@{}p{0.24\linewidth}L@{}}\toprule
+Axis & Candidate semantics in the primary controlled suite \\
+\midrule
+Prediction closure & Threshold predictions and filter to the universe without ancestor closure. \\
+Truth closure & Filter direct truth without ancestor closure. \\
+Relation set & Restrict the ontology relations to \texttt{is\_a}. \\
+Namespace policy & Toggle whether closure is restricted within the declared namespaces. \\
+Root policy & Add declared namespace roots to the eligible term universe. \\
+Term universe & Use emitted terms rather than the canonical universe. \\
+Label-dependent universe & Use the union of declared closed truth terms. \\
+Comparison boundary & Use strict \texttt{>} rather than the declared threshold comparison. \\
+Score representation & Round the continuous scores to two decimal places before thresholding. \\
+Alternative IDs & Replace canonical terms by the reverse alias mapping used by the frozen fixture implementation. \\
+Obsolete IDs & Add the corresponding obsolete IDs from the frozen inverse replacement map. \\
+\bottomrule\end{tabularx}\end{table}
+
+Table~\ref{tab:pairs} lists the registered interactions.
+
+Forward order is fixed: choose relation and namespace policies, construct the
+universe, optionally round scores, threshold, close or retain direct sets, filter,
+then apply alias/obsolete policies. Truth is reconstructed from retained direct
+annotations. Label-dependent-universe edits use available evaluation annotations;
+private injected-fault labels never enter diagnosis. The targeted extension has
+no alias/obsolete motifs, so those registered candidates can be no-ops.
+
+
+\begin{table}[tbp]\centering\small
+\caption{The eight registered two-axis candidates. All other pairs are outside the tested family.}
+\label{tab:pairs}
+\begin{tabularx}{\linewidth}{@{}LL@{}}\toprule
+First axis & Second axis \\\midrule
+Prediction closure & Root policy \\
+Relation set & Term universe \\
+Alternative IDs & Obsolete IDs \\
+Truth closure & Label-dependent universe \\
+Namespace policy & Relation set \\
+Comparison boundary & Score representation \\
+Prediction closure & Comparison boundary \\
+Term universe & Alternative IDs \\\bottomrule
+\end{tabularx}\end{table}
+
+\section{Observation and matching}
+
+The six controlled thresholds are 0.01, 0.10, 0.25, 0.50, 0.75 and 0.99. Pairwise
+evidence contains prediction pairs at each threshold, truth pairs, per-protein
+counts, aggregate metrics and the declared header. Counts-only evidence omits
+the pair channels. Aggregate-only evidence additionally omits per-protein counts.
+The Fmax-only ablation retains only the maximum protein-centric F1 across those
+same thresholds, without the optimizing threshold.
+
+Public JSON values are compared with frozen typed semantics. Mapping key order
+is immaterial; sequences preserve order; booleans, integers and floats differ;
+floats preserve exact binary representation and signed zero. Sets are represented
+as canonically ordered sequences at the public boundary. These exact-match rules
+are separate from external evaluator agreement at an absolute tolerance of 1e-12.
+
+\begin{small}\begin{verbatim}
+input: observed channels O, allowed projection L, registered candidates A
+for each candidate a in A:
+    replay its fixed field choices and project to L
+E = all candidates whose projected channels equal O
+M = all a in E for which no b in E is a strict subset of a
+partition A by equality of projected channels
+if E is empty: return unresolved
+if M consists of the empty set: return observationally equivalent
+if M has multiple members: return all minimal explanations
+if L is aggregate-only: retain M but refuse specific attribution
+otherwise: return the unique nonempty registered explanation
+\end{verbatim}\end{small}
+
+One minimal explanation may contain multiple axes. The result is relative to
+the registered family; it cannot rule out unregistered causes with identical
+observations. Private intervention histories can support controlled masking and
+no-effect annotations, but are not inferred from this public procedure.
+
+\section{Independent verification and comparison}
+
+The independent matcher uses typed structural trees and a cardinality-ordered
+antichain. It does not import production enumeration, minimality or signature
+functions. All 336 retained cases were checked against both new production
+outputs and sealed historical public outputs. Forward execution was checked
+separately; its two implementations share projection and metric code.
+
+Twelve hand-specified boundaries test empty explanations, unique singleton and
+multi-axis explanations, incomparable alternatives, removal of matching strict
+supersets, unmatched observations, observational equivalence, pair-to-count and
+count-to-aggregate information loss, equal Fmax with different curves, evidence
+specificity, and candidate-order/duplicate-ID handling. Seven representation
+checks and the original hand-specified extension expectations were also retained.
+
+The comparison seals outputs before scoring. Single-axis diagnosis uses 12
+candidates and full diagnosis uses 20, under the same public evidence and refusal
+policy. Fmax-only uses 20 candidates with explicitly reduced evidence. Preservation
+is exact agreement of the minimal explanation sets with the independent reference
+under the original observation scope; it does not call an information-reduced
+matcher incorrect merely because information was removed.
+
+Public unique-diagnosis denominators are 164 in the primary suite and 30 in the
+extension. They differ from the historical intervention-category denominators
+96 and 24. Historical coverage statuses are not revised. Zero action denominators
+in the extension remain not estimable. Aggregate-only refusal is policy-imposed,
+so its zero unique-diagnosis coverage is not a separate information-loss finding.
+
+The primary suite has 24 pairwise, six counts-only and six aggregate-only cases
+whose explanation sets require registered multi-axis candidates. Thirty of these
+permit unique diagnosis under the public evidence rule. The extension shows no
+advantage over single-axis diagnosis. Observational variants are dependent and
+are not analyzed as independent samples for statistical significance.
+
+\section{Actions, real cases and reproduction}
+
+The new action assessment checks field restrictions and target values against an
+independent rule implementation. It does not execute arbitrary emitted patches.
+Controlled restoration uses precomputed counterfactual surfaces; retained real
+restoration evidence comes from two specific replay workflows. The three real
+walkthroughs were reconciled from retained summaries, without a new real replay.
+
+The small capsule demonstrates the matcher on three precomputed public cases
+(unique, equivalent and unresolved) with the full registry. It was reproduced
+by a separate execution agent in a fresh Python 3.9.6 environment without pip
+or third-party packages. Forward ontology computation, adapters and model
+inference are outside this capsule's scope.
+
+\clearpage
+\section{Assessment denominators and validation scope}
+The following tables retain the original assessment categories separately from the public-state comparison in the main paper.
+\begin{table}[tbp]
+\centering
+\small
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.18}
+\caption{Coverage and estimability in the primary audit and targeted extension. Counts are reported for each assessment rather than treated as a single additive total.}
+\label{tab:r043-coverage}
+\begin{tabularx}{\linewidth}{@{}L N{0.09\linewidth} L L@{}}
+\toprule
+Assessment & Cases & Observed result & Coverage limitation \\
+\midrule
+\multicolumn{4}{@{}l}{\textit{Primary controlled audit: 288 cases}} \\
+\addlinespace[3pt]
+Unique attribution & 96 & 100\% exact explanation-set recovery & Three discrepancy types lacked positive examples. \\
+\addlinespace[3pt]
+Equivalence classes & 0 & Not estimable & No eligible cases. \\
+\addlinespace[3pt]
+Other validation checks & --- & All specified criteria met & Does not establish coverage of the missing categories. \\
+\midrule
+\multicolumn{4}{@{}l}{\textit{Targeted extension: 48 cases}} \\
+\addlinespace[3pt]
+Unique attribution & 24 & 100\% precision and recall & Targeted discrepancy types only. \\
+\addlinespace[3pt]
+Equivalence classes & 8 & 100\% complete-class coverage & Eligible extension cases only. \\
+\bottomrule
+\end{tabularx}
+\par\smallskip
+{\footnotesize\raggedright Counts are assessment-specific and need not sum to the suite size. The primary suite contains 192 pairwise, 48 counts-only and 48 aggregate-only cases. Other checks cover reconstruction, masking, no observable effect, unknown cases, false gains and reduced observability. Overall primary-suite coverage remains not estimable; the extension is reported separately.\par}
+\end{table}
+\begin{table}[tbp]
+\centering
+\small
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.18}
+\caption{Validation questions, available evidence and interpretation boundaries.}
+\label{tab:experiment-status}
+\begin{tabularx}{\linewidth}{@{}>{\hsize=.85\hsize}L>{\hsize=.9\hsize}L>{\hsize=1.25\hsize}L@{}}
+\toprule
+Validation question & Evidence & Interpretation boundary \\
+\midrule
+Can causes be distinguished? & 288 primary cases; 48 targeted cases & Primary coverage is incomplete; the extension tests the missing categories. \\
+\addlinespace[3pt]
+Is explanation matching correct? & Independent regression on all 336 cases & Matching-layer independence; shared projection and metric code. \\
+\addlinespace[3pt]
+Do interactions add information? & Single-axis and Fmax-only comparisons & Same retained cases; gains are conditional on interactions and evidence. \\
+\addlinespace[3pt]
+Do evaluators agree? & 6 endpoints at 99 thresholds & Agreement under one matched snapshot and contract. \\
+\addlinespace[3pt]
+Can public outputs be replayed? & 4 model families; 2 corpora; 2 GO releases & Specified retained transforms only; two branches require reruns. \\
+\addlinespace[3pt]
+Are corrective actions consistent? & 13 controlled and 3 real-artifact decisions & Frozen-rule conformance; restoration is tested separately. \\
+\addlinespace[3pt]
+Can formats share an interface? & 4 real-format smoke witnesses & Bounded adapter checks; not full pipeline equivalence. \\
+\addlinespace[3pt]
+Does the audit extend prospectively? & 14 taxa; no eligible new annotations & Protocol only; no outcome evidence yet. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+\clearpage
+\section{Reproduction scope}
+The local reproduction materials include the registered family, three precomputed public examples, the production matcher, an independently implemented reference, frozen expectations, and input hashes. The audit entry point does not read the expectations; a separate check compares the saved output with those expectations and the reference. Forward surface generation is outside the small component capsule. The accompanying artifact index maps these materials to the main results and states which workflows were replayed and which were reconciled from retained records.
+\end{document}

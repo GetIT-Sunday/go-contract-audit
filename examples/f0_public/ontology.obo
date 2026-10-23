@@ -1,0 +1,44 @@
+format-version: 1.2
+
+[Term]
+id: SYN:ROOT
+name: root
+namespace: synthetic
+
+[Term]
+id: SYN:A
+name: chain-a
+namespace: synthetic
+is_a: SYN:ROOT ! root
+
+[Term]
+id: SYN:B
+name: fork-b
+namespace: synthetic
+is_a: SYN:ROOT ! root
+
+[Term]
+id: SYN:C
+name: diamond-c
+namespace: synthetic
+is_a: SYN:A ! a
+relationship: part_of SYN:B ! b
+alt_id: SYN:C_ALT
+
+[Term]
+id: SYN:D
+name: chain-d
+namespace: synthetic
+is_a: SYN:C ! c
+
+[Term]
+id: SYN:Z
+name: disconnected
+namespace: synthetic
+
+[Term]
+id: SYN:OLD
+name: old
+namespace: synthetic
+is_obsolete: true
+replaced_by: SYN:A

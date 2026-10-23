@@ -1,0 +1,13 @@
+schema_version: goaudit.contract.v1
+audit_id: f0-example
+created_utc: 2026-10-08T00:00:00Z
+claim_scope: both
+random_seed: 4300
+inputs_hash_policy: sha256
+predictions: {path: f0_public/scores.tsv, format: long_tsv, protein_field: protein_id, term_field: go_id, score_field: score, duplicate_policy: error, absent_term_score: 0.0, score_dtype: float64, allowed_range: [0.0, 1.0]}
+truth: {path: f0_public/truth.tsv, format: pair_tsv, semantics: direct, negative_semantics: unknown, evidence_filter: [], unknown_protein_policy: error}
+ontology: {path: f0_public/ontology.obo, format: obo, release: synthetic-f0-v1, relations: [is_a, part_of], reflexive_closure: true, direction: child_to_parent, namespace_roots: {synthetic: 'SYN:ROOT'}, alt_id_policy: resolve, obsolete_policy: drop, namespace_policy: close_within_namespace}
+evaluation: {prediction_closure: ancestor, truth_closure: ancestor, root_policy: exclude, term_universe: emitted_plus_ancestors, universe_label_dependence: forbidden, comparison: greater_equal, threshold_representation: float64_direct, threshold_grid: {type: explicit, values: [0.01, 0.10, 0.25, 0.50, 0.75, 0.99]}, precision_eligibility: predicted_proteins, recall_eligibility: truth_bearing_proteins, averaging: both}
+external_evaluator: {mode: none, version: none, input_contract: raw_scores}
+threshold_analysis: {enabled: true, calibration_split: f0_public/calibration.txt, target_split: f0_public/target.txt, grouping: cluster_file, group_file: f0_public/clusters.tsv, policies: [raw_calibrated, closed_calibrated], target_score_field: closed, selection_metric: protein_f1, tie_break: lowest_threshold, bootstrap_draws: 20, plateau_tolerance_f1: 0.005, target_oracle_diagnostic: true}
+deployment_risk: {reference_pipeline: raw_calibrated, precision_drop_budget: 0.2, coverage_drop_budget: 0.2, prediction_inflation_budget: 2.0, abstention_increase_budget: 0.2}

@@ -1,0 +1,13 @@
+{
+  "README.md": "a3456eb989ea7dbafbc60a731ad03a3100fefacd53c1309ffd59b568973737ac",
+  "audit_examples.py": "fee536868e05d6b63a77512f0c43b1c2be6f416c8ee49ba86f1268a61f0e1134",
+  "candidate_registry.json": "5e7dfedf0345bdf550ebe0beddcbb17d5620c1ebf157c450e5c52482b2789230",
+  "env-spec.json": "49f6110fa4f797d8f58d2582d21b33f5f7a6411713f35713792dc1e2294ff4f8",
+  "examples.json": "0806cf87e4e9cb3640155f5eb7cd146df451a17c89814d511194ca4329e03c46",
+  "expected.json": "99091a71a8addd9f1161339e2176bbf70319ee8ea392ecb1ec5c15107e50eaab",
+  "matcher/__init__.py": "0b0248a4151dc2cffc4f8dccb8a047a460c814279ca4f90060f573a06dbde407",
+  "matcher/enumeration.py": "598c6b6a890f9e121c43d5b6913891023039367fc4cc9a95e52a48d2fb8de7f5",
+  "matcher/signature.py": "e92fe62ed6a020f9ad44e603f86134593713c7f57d9fe84bde574baefe4a069d",
+  "provenance.json": "caa5b1d0088a859c7787c927db8b783a36fa09f04255966f254ee6443d969edb",
+  "reference.py": "13759aa23ab82b09862030712793cd6d0daae5dd8cd795d407013b3e1121c9ba"
+}

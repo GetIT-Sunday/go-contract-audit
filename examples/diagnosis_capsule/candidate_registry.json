@@ -1,0 +1,128 @@
+[
+  {
+    "axes": [],
+    "id": "clean"
+  },
+  {
+    "axes": [
+      "prediction_closure"
+    ],
+    "id": "prediction_closure"
+  },
+  {
+    "axes": [
+      "truth_closure"
+    ],
+    "id": "truth_closure"
+  },
+  {
+    "axes": [
+      "relation_set"
+    ],
+    "id": "relation_set"
+  },
+  {
+    "axes": [
+      "namespace_policy"
+    ],
+    "id": "namespace_policy"
+  },
+  {
+    "axes": [
+      "root_policy"
+    ],
+    "id": "root_policy"
+  },
+  {
+    "axes": [
+      "term_universe"
+    ],
+    "id": "term_universe"
+  },
+  {
+    "axes": [
+      "term_universe_label_dependence"
+    ],
+    "id": "term_universe_label_dependence"
+  },
+  {
+    "axes": [
+      "comparison_boundary"
+    ],
+    "id": "comparison_boundary"
+  },
+  {
+    "axes": [
+      "threshold_representation"
+    ],
+    "id": "threshold_representation"
+  },
+  {
+    "axes": [
+      "alt_id_policy"
+    ],
+    "id": "alt_id_policy"
+  },
+  {
+    "axes": [
+      "obsolete_policy"
+    ],
+    "id": "obsolete_policy"
+  },
+  {
+    "axes": [
+      "prediction_closure",
+      "root_policy"
+    ],
+    "id": "prediction_closure+root_policy"
+  },
+  {
+    "axes": [
+      "relation_set",
+      "term_universe"
+    ],
+    "id": "relation_set+term_universe"
+  },
+  {
+    "axes": [
+      "alt_id_policy",
+      "obsolete_policy"
+    ],
+    "id": "alt_id_policy+obsolete_policy"
+  },
+  {
+    "axes": [
+      "term_universe_label_dependence",
+      "truth_closure"
+    ],
+    "id": "term_universe_label_dependence+truth_closure"
+  },
+  {
+    "axes": [
+      "namespace_policy",
+      "relation_set"
+    ],
+    "id": "namespace_policy+relation_set"
+  },
+  {
+    "axes": [
+      "comparison_boundary",
+      "threshold_representation"
+    ],
+    "id": "comparison_boundary+threshold_representation"
+  },
+  {
+    "axes": [
+      "comparison_boundary",
+      "prediction_closure"
+    ],
+    "id": "comparison_boundary+prediction_closure"
+  },
+  {
+    "axes": [
+      "alt_id_policy",
+      "term_universe"
+    ],
+    "id": "alt_id_policy+term_universe"
+  }
+]

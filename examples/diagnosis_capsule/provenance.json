@@ -1,0 +1,37 @@
+{
+  "examples": [
+    {
+      "id": "example_01",
+      "sha256": "a487865b9264f914805f216e0d6a837ec4f5d6efecf9479e99c6960e5e543022",
+      "source": "r043c_formal_run1/public/r043c-p00-m17f-pairwise.json"
+    },
+    {
+      "id": "example_02",
+      "sha256": "2f8d132871f061387d57846ca919694f24bc2e4d6284b9807d8e60e71b9ad504",
+      "source": "r043c_formal_run1/public/r043c-p00-h64p-pairwise.json"
+    },
+    {
+      "id": "example_03",
+      "sha256": "ecf951835110d74bd8f30df87275be6c56a4f2e21edb1c8dc18cd969bd76e8e1",
+      "source": "r043b_formal_run1/topology_0/public/T0-B21-C.json"
+    }
+  ],
+  "reference_run_sha256": "4d1b0d44f54c4035c84b893e06fa9b9130c2f828537ce13a783dbcb797f000f0",
+  "source_copies": [
+    {
+      "sha256": "598c6b6a890f9e121c43d5b6913891023039367fc4cc9a95e52a48d2fb8de7f5",
+      "source": "go_audit/r043b/enumeration.py",
+      "target": "matcher/enumeration.py"
+    },
+    {
+      "sha256": "e92fe62ed6a020f9ad44e603f86134593713c7f57d9fe84bde574baefe4a069d",
+      "source": "go_audit/r043b/signature.py",
+      "target": "matcher/signature.py"
+    },
+    {
+      "sha256": "13759aa23ab82b09862030712793cd6d0daae5dd8cd795d407013b3e1121c9ba",
+      "source": "r051/reference.py",
+      "target": "reference.py"
+    }
+  ]
+}

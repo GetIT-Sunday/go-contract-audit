@@ -1,0 +1,4 @@
+numpy>=1.24,<3
+PyYAML>=6.0,<7
+# Optional: required only for HDF5 model-output adapters.
+# h5py>=3.8,<4

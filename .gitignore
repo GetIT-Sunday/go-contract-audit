@@ -1,0 +1,14 @@
+.DS_Store
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+build/
+dist/
+*.egg-info/
+audit/
+adapted/
+*.h5
+*.hdf5
+*.obo.gz
+*.tsv.gz
