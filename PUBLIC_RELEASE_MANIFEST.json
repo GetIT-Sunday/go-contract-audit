@@ -6,8 +6,8 @@
       "sha256": "58a50deccb12c59a287c51310d8252bed039c8d59447c73999ec87882cfe9583"
     },
     "README.md": {
-      "bytes": 3139,
-      "sha256": "aae48dbb3f17784a51fc32036fff9ff29533c970b52ffc3d0de41f128747d8e0"
+      "bytes": 3141,
+      "sha256": "ad3c22340d6e04644e2ad997a5805f300063bfeeaa3ad01e56578d0be77813e9"
     },
     "docs/data_access.md": {
       "bytes": 871,
@@ -26,8 +26,8 @@
       "sha256": "aafcccbdbc19f3009ab55821aa50faa8445d15749651ae82cdb6be721c1ca647"
     },
     "examples/diagnosis_capsule/MANIFEST.json": {
-      "bytes": 994,
-      "sha256": "0da9b3840905dbd9571562febc76677005945ef12b8a4a88f805e3fc3acbc64b"
+      "bytes": 993,
+      "sha256": "825136d8226c85fac6e82e1b36c0cd2fa5e1723f8d2cfaf1d784bba12df88eb7"
     },
     "examples/diagnosis_capsule/README.md": {
       "bytes": 1483,

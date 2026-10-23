@@ -50,8 +50,8 @@ run a model, or establish an independent biological validation.
 
 ```bash
 cd examples/diagnosis_capsule
-python audit_examples.py audit --out /tmp/goaudit-capsule-result.json
-python audit_examples.py check --out /tmp/goaudit-capsule-result.json
+python3 audit_examples.py audit --out /tmp/goaudit-capsule-result.json
+python3 audit_examples.py check --out /tmp/goaudit-capsule-result.json
 ```
 
 Expected output is `AUDIT 3 cases` followed by `CHECK PASS 3 cases`.
