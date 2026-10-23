@@ -1,4 +1,4 @@
-"""Frozen R043-A verdict fields, gates, and stable exit codes."""
+"""Frozen audit verdict fields, gates, and stable exit codes."""
 from __future__ import annotations
 from typing import Any
 EXIT_OK=0; EXIT_VALIDATION=2; EXIT_CANONICAL=3; EXIT_UNRESOLVED=4; EXIT_ADAPTER=5

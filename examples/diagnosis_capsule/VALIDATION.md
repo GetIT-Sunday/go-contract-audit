@@ -1,7 +1,7 @@
 # 独立按文档复现记录
 
 日期：2026-10-20。
-执行者：fresh agent `/root/r051_capsule_doc_reproduction`。
+验证方式：按 README 在新建的隔离 Python 环境中执行。
 环境：同一机器上新建 `capsule_env01`，Python 3.9.6；未安装 pip/第三方依赖，未继承 site-packages。
 环境探测确认 NumPy、PyYAML 不存在。
 

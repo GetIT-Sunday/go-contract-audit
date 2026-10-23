@@ -1,4 +1,4 @@
-"""Generic R043-A stage-1 orchestration; no project-specific imports."""
+"""Generic contract-audit orchestration; no project-specific imports."""
 from __future__ import annotations
 import json,platform,sys
 from pathlib import Path

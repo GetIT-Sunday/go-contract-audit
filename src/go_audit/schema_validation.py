@@ -1,4 +1,4 @@
-"""Dependency-free validator for the frozen R043 fixture JSON Schema subset."""
+"""Dependency-free validator for the public fixture JSON Schema subset."""
 from __future__ import annotations
 
 import copy

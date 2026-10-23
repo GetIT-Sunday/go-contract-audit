@@ -26,16 +26,16 @@
       "sha256": "aafcccbdbc19f3009ab55821aa50faa8445d15749651ae82cdb6be721c1ca647"
     },
     "examples/diagnosis_capsule/MANIFEST.json": {
-      "bytes": 993,
-      "sha256": "2199462e5ac90d124951d51581aaa584c9044d3c852321da91de567d07bab1ef"
+      "bytes": 994,
+      "sha256": "0da9b3840905dbd9571562febc76677005945ef12b8a4a88f805e3fc3acbc64b"
     },
     "examples/diagnosis_capsule/README.md": {
       "bytes": 1483,
       "sha256": "a3456eb989ea7dbafbc60a731ad03a3100fefacd53c1309ffd59b568973737ac"
     },
     "examples/diagnosis_capsule/VALIDATION.md": {
-      "bytes": 956,
-      "sha256": "0126f2b13878e6239d52a44c357d19bb14c2a9a67ac78fe3fb1fbaec594a5c05"
+      "bytes": 962,
+      "sha256": "be39562551a2317a9cb67d94832672d8495e02578a3e476d44e5b62b7abd3822"
     },
     "examples/diagnosis_capsule/audit_examples.py": {
       "bytes": 1904,
@@ -70,8 +70,8 @@
       "sha256": "e92fe62ed6a020f9ad44e603f86134593713c7f57d9fe84bde574baefe4a069d"
     },
     "examples/diagnosis_capsule/provenance.json": {
-      "bytes": 1258,
-      "sha256": "caa5b1d0088a859c7787c927db8b783a36fa09f04255966f254ee6443d969edb"
+      "bytes": 1245,
+      "sha256": "ee19906525111525f72775783943ab63731d05acf9e8fed7ce7f4098b40b8bdd"
     },
     "examples/diagnosis_capsule/reference.py": {
       "bytes": 3005,
@@ -146,8 +146,8 @@
       "sha256": "140de43eaf938508fa62afc2fe30497c267188fdd753a1ab3014941584eca9c6"
     },
     "paper/supplement/supplementary_methods.tex": {
-      "bytes": 12467,
-      "sha256": "2f8d66987744ffa9b4f25215d0982b1f265e233f783eb9bae57a039a2f50bcbb"
+      "bytes": 12473,
+      "sha256": "2fa96dd0ac2d1323ab9c965a4f08cb4f79832e9a28e6805ce92074d404c3b5a8"
     },
     "pyproject.toml": {
       "bytes": 482,
@@ -174,8 +174,8 @@
       "sha256": "f7cd84507c6337072709a8099d5fb7a6e600af8dee0338bf8b6a02b6009a780a"
     },
     "src/go_audit/README.md": {
-      "bytes": 3160,
-      "sha256": "40f15ecdbc3eb07f62535b043041327a8b3b36b570db25bd12f148ae6c7c0fe5"
+      "bytes": 3206,
+      "sha256": "369fc0506155760f9991c08cdfa6f7331d594bb8eb490b8879d981d48c2e66ea"
     },
     "src/go_audit/__init__.py": {
       "bytes": 239,
@@ -207,7 +207,7 @@
     },
     "src/go_audit/engine.py": {
       "bytes": 11322,
-      "sha256": "3b25ca795cb4b7d46c3107321be125dd7a4b18e93d4d7f2bd6ea4edcfbabc035"
+      "sha256": "11f2aebff6ca9298a26bc770fe2619e9010e6203f386ee6cbb5349e306969639"
     },
     "src/go_audit/io.py": {
       "bytes": 11324,
@@ -246,8 +246,8 @@
       "sha256": "43ccc9045e4e2c1b4567fbb3f2f1ccd5c2e61228034f3ffab88ff02b69a67636"
     },
     "src/go_audit/schema_validation.py": {
-      "bytes": 6155,
-      "sha256": "0efcc85a28efc7158e76644f4edbd19af637fdf2b9186e118b4ec4f04f5aeb83"
+      "bytes": 6150,
+      "sha256": "dde4a8c2f859cfb94bf5dc4369cbc29204adc8d0731f23f9d349daa8e9e99f0a"
     },
     "src/go_audit/semantics.py": {
       "bytes": 3230,
@@ -266,8 +266,8 @@
       "sha256": "cd4dc690288bdd458500050751b19c016aa3e1f79cf3439d2bed2c92fbfcb40f"
     },
     "src/go_audit/verdict.py": {
-      "bytes": 3458,
-      "sha256": "83c237512c3bc7aa92a30b83efab0fa1ce9561efb9918cda7a03f2de5e0d7c51"
+      "bytes": 3457,
+      "sha256": "e15c863fcb7a575acd20ae8180c48b49acbbc71f3e88f355f653480fd5872e53"
     }
   }
 }

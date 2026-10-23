@@ -84,5 +84,6 @@ The semantic audit compares:
 Fixed policies are evaluated exactly as declared. The CLI never searches for a
 threshold. Bootstrap draws resample declared clusters or proteins and report
 fixed-policy metric uncertainty. JSON, CSV, Markdown, and a SHA256 manifest are
-written under `output_dir`. Simulation and experiment-specific gates are
-deliberately absent until R043-A is frozen.
+written under `output_dir`. Simulation-specific gates are deliberately kept
+outside this portable component until their corresponding public contract is
+released.
